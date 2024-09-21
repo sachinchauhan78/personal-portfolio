@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("sac.jpeg");
+}
+
+header {
+    background: transparent;
+    color: red;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 25px;
+    justify-content: center;
+}

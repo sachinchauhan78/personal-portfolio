@@ -1,0 +1,27 @@
+body{
+    background-image: url("sac.jpeg");
+}
+.contact {
+    padding: 2rem;
+    background-image: url("sac.jpeg");
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  
+  form button {
+    background-color:aqua;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }

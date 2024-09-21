@@ -1,0 +1,24 @@
+body{
+  background-color:rgb(173, 202, 230) ;
+}
+.about {
+  padding: 2rem;
+  background-color:rgb(173, 202, 230)ue;
+ 
+    
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 2rem;
+    
+    
+  }
