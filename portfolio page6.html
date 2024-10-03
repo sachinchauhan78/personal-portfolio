@@ -4,18 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="portfolio page6.css">
 </head>
 <body>
-    <section id="contact">
+<header>
+  
+  <nav class="navbar">
+      <a href="http://127.0.0.1:5500/portfoliopage2.html">Home</a>
+      <a href="http://127.0.0.1:5500/portfolio%20page3.html">About</a>
+      <a href="http://127.0.0.1:5500/portfolio%20page4.html">Service</a>
+      <a href="http://127.0.0.1:5500/portfolio%20page5.html">Project</a>
+      <a href="http://127.0.0.1:5500/portfolio%20page6.html">Contact</a>
+  </nav>
+</header>
         <h1>Contact Me</h1>
-        <form>
-          <input type="text" placeholder="Name" required>
-          <input type="email" placeholder="Email" required>
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Send Message</button>
+
+        <form name="submit-to-google-sheet">
+        <label>Name:</label>
+        <input type="text" name="Name" required>
+        <label>Email</label>
+        <input type="email" name="Email" required>
+        <label>Message</label>
+        <textarea name="Message" cols="20" required></textarea>
+        <input type="submit" name="submit">
         </form>
-      </section>
-    </main>
+        
+        <script>
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbwK-1UT9ykO3QBa5ThQ9b-0kPGwBbh2kfdDcFbYKdm3qk7FnsvXT8PHDEIIahcJZ0zi7A/exec'
+          const form = document.forms['submit-to-google-sheet']
+        
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => console.log('Success!', response))
+              .catch(error => console.error('Error!', error.message))
+          })
+        </script>
+
 </body>
 </html>
